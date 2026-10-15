@@ -1,8 +1,8 @@
 #!/bin/bash
 # Installs this kit in a Claude Code cloud session: the mods into
 # /root/claude-mods, the savvy-flow skill and the savvy agents into ~/.claude.
-# The repository is private, so CLAUDE_MODS_TOKEN must hold a GitHub token
-# that can read it. Never fails the session: on an error it says so and exits 0.
+# CLAUDE_MODS_TOKEN is only needed for a private fork. Never fails the
+# session: on an error it says so and exits 0.
 set -u
 
 REPO="${CLAUDE_MODS_REPO:-patle1/claude-mods}"
@@ -23,7 +23,7 @@ tmp="$(mktemp -d)"
 trap 'rm -rf "$tmp"' EXIT
 
 if ! fetch FILES "$tmp/FILES"; then
-  echo "claude-mods: could not read $BASE/FILES (is CLAUDE_MODS_TOKEN set?)" >&2
+  echo "claude-mods: could not read $BASE/FILES" >&2
   exit 0
 fi
 

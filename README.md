@@ -16,7 +16,6 @@ In the cloud environment's settings dialog (environment selector, settings icon 
 Environment variables:
 
 ```
-CLAUDE_MODS_TOKEN=<fine-grained GitHub token: this repository only, Contents read-only>
 CLAUDE_CODE_PLUGIN_DIRS=/root/claude-mods/mods/savvy-progress:/root/claude-mods/mods/context-colour
 ```
 
@@ -24,8 +23,7 @@ Setup script:
 
 ```bash
 #!/bin/bash
-curl -fsSL -H "Authorization: Bearer $CLAUDE_MODS_TOKEN" \
-  https://raw.githubusercontent.com/patle1/claude-mods/main/install.sh | bash || true
+curl -fsSL https://raw.githubusercontent.com/patle1/claude-mods/main/install.sh | bash || true
 ```
 
 `install.sh` downloads every file listed in `FILES` into `/root/claude-mods`, then copies the skill and agents into `~/.claude`.
