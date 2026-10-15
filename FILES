@@ -19,5 +19,14 @@ mods/savvy-progress/hooks/hooks.json
 mods/savvy-progress/hooks/register.tsx
 mods/savvy-progress/tsconfig.json
 mods/savvy-progress/types/index.d.ts
+mods/ste-mode/.claude-plugin/icon.png
+mods/ste-mode/.claude-plugin/plugin.json
+mods/ste-mode/LICENSE
+mods/ste-mode/README.md
+mods/ste-mode/commands/ste.md
+mods/ste-mode/hooks-handlers/session-start.sh
+mods/ste-mode/hooks/hooks.json
+mods/ste-mode/rules/ste.md
+mods/ste-mode/tests/test-hook.sh
 skills/savvy-flow/LICENSE
 skills/savvy-flow/SKILL.md
