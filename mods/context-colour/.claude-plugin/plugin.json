@@ -1,0 +1,6 @@
+{
+  "name": "context-colour",
+  "version": "0.1.0",
+  "description": "A coloured line above the prompt showing how full the context window is",
+  "types": "./types/index.d.ts"
+}
